@@ -2,7 +2,7 @@ using System;
 
 namespace Inheritance.Animals
 {
-    public class Tiger : Mammal
+    public class Tiger : Mammal, IPredator
     {
         public override void Speak()
         {

@@ -33,6 +33,14 @@ namespace Inheritance
                     Console.WriteLine($"{mammal.Name} has a fur length of {mammal.FurLength}");
                 }
             }
+
+            foreach (Animal animal in animals)
+            {
+                if (animal is IPredator)
+                {
+                    (animal as IPredator).HuntPrey("mouse");
+                }
+            }
         }
 
 

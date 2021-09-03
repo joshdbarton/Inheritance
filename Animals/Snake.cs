@@ -2,7 +2,7 @@ using System;
 
 namespace Inheritance.Animals
 {
-    public class Snake : Animal
+    public class Snake : Animal, IPredator
     {
         public int SkinAge { get; set; }
         public override void Speak()
