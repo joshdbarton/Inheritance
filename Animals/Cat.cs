@@ -2,30 +2,9 @@ using System;
 
 namespace Inheritance.Animals
 {
-    public class Cat
+    public class Cat : Mammal
     {
-        public string Name { get; set; }
-        public int FurLength { get; set; }
-        private bool _isSleeping { get; set; }
-
-        public string SleepStatus
-        {
-            get
-            {
-                return _isSleeping ? "asleep" : "awake";
-            }
-        }
-
-        public void Sleep()
-        {
-            _isSleeping = true;
-        }
-
-        public void Wakeup()
-        {
-            _isSleeping = false;
-        }
-        public void Meow()
+        public override void Speak()
         {
             Console.WriteLine("meow!");
         }

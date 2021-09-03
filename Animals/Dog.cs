@@ -2,31 +2,9 @@ using System;
 
 namespace Inheritance.Animals
 {
-    public class Dog
+    public class Dog : Mammal
     {
-        public string Name { get; set; }
-        public int FurLength { get; set; }
-        private bool _isSleeping { get; set; }
-
-        public string SleepStatus
-        {
-            get
-            {
-                return _isSleeping ? "asleep" : "awake";
-            }
-        }
-
-        public void Sleep()
-        {
-            _isSleeping = true;
-        }
-
-        public void Wakeup()
-        {
-            _isSleeping = false;
-        }
-
-        public void Bark()
+        public override void Speak()
         {
             Console.WriteLine("woof!");
         }
