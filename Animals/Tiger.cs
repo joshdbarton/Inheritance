@@ -2,9 +2,8 @@ using System;
 
 namespace Inheritance.Animals
 {
-    public class Tiger : Animal
+    public class Tiger : Mammal
     {
-        public int FurLength { get; set; }
         public override void Speak()
         {
             Console.WriteLine("ROAR!");

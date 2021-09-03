@@ -23,6 +23,16 @@ namespace Inheritance
 
             animals[0].Sleep();
             Console.WriteLine($"{animals[0].Name} is {animals[0].SleepStatus}");
+
+            foreach (Animal animal in animals)
+            {
+                if (animal is Mammal)
+                {
+                    Mammal mammal = (Mammal)animal;
+                    mammal.GetAHaircut();
+                    Console.WriteLine($"{mammal.Name} has a fur length of {mammal.FurLength}");
+                }
+            }
         }
 
 

@@ -2,10 +2,8 @@ using System;
 
 namespace Inheritance.Animals
 {
-    public class Dog : Animal
+    public class Dog : Mammal
     {
-        public int FurLength { get; set; }
-
         public override void Speak()
         {
             Console.WriteLine("woof!");
