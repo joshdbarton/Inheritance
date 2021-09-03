@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Inheritance.Animals;
+
 
 namespace Inheritance
 {
@@ -7,19 +9,20 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            Tiger hobbes = new Tiger { Name = "Hobbes", FurLength = 15 };
-            Cat boots = new Cat { Name = "Boots", FurLength = 12 };
-            Dog fido = new Dog { Name = "Fido", FurLength = 8 };
-            Snake snek = new Snake { Name = "Snek" };
+            List<Animal> animals = new List<Animal> {
+                new Tiger { Name = "Hobbes", FurLength = 15 },
+                new Cat { Name = "Boots", FurLength = 12 },
+                new Dog { Name = "Fido", FurLength = 8 },
+                new Snake { Name = "Snek" }
+            };
 
-            Console.Write($"{hobbes.Name} says ");
-            hobbes.Roar();
-            Console.Write($"{boots.Name} says ");
-            boots.Meow();
-            Console.Write($"{fido.Name} says ");
-            fido.Bark();
-            Console.Write($"{snek.Name} says ");
-            snek.Hiss();
+            foreach (Animal animal in animals)
+            {
+                animal.Speak();
+            };
+
+            animals[0].Sleep();
+            Console.WriteLine($"{animals[0].Name} is {animals[0].SleepStatus}");
         }
 
 

@@ -2,31 +2,10 @@ using System;
 
 namespace Inheritance.Animals
 {
-    public class Snake
+    public class Snake : Animal
     {
-        public string Name { get; set; }
         public int SkinAge { get; set; }
-        private bool _isSleeping { get; set; }
-
-        public string SleepStatus
-        {
-            get
-            {
-                return _isSleeping ? "asleep" : "awake";
-            }
-        }
-
-        public void Sleep()
-        {
-            _isSleeping = true;
-        }
-
-        public void Wakeup()
-        {
-            _isSleeping = false;
-        }
-
-        public void Hiss()
+        public override void Speak()
         {
             Console.WriteLine("hiss!");
         }
