@@ -20,6 +20,10 @@ namespace Inheritance
             fido.Bark();
             Console.Write($"{snek.Name} says ");
             snek.Hiss();
+
+            Console.WriteLine($"Is Hobbes sleeping? {hobbes.SleepStatus}");
+            hobbes.Sleep();
+            Console.WriteLine($"Is Hobbes sleeping? {hobbes.SleepStatus}");
         }
 
 

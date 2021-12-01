@@ -6,7 +6,7 @@ namespace Inheritance.Animals
     {
         public string Name { get; set; }
         public int SkinAge { get; set; }
-        private bool _isSleeping { get; set; }
+        private bool _isSleeping = false;
 
         public string SleepStatus
         {
